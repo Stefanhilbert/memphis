@@ -18,7 +18,7 @@ function loader(element) {
             element.textContent = '';
         }
     }, 300);
-} 
+}
 
 function typeText(element, text) {
     let index = 0
@@ -84,10 +84,9 @@ const handleSubmit = async (e) => {
     const messageDiv = document.getElementById(uniqueId)
 
     // messageDiv.innerHTML = "..."
-    loader(messageDiv);
-    
-    //fetch
-    const response = await fetch('http://localhost:5000', {
+    loader(messageDiv)
+
+    const response = await fetch('https://localhost5000/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -96,6 +95,7 @@ const handleSubmit = async (e) => {
             prompt: data.get('prompt')
         })
     })
+
     clearInterval(loadInterval)
     messageDiv.innerHTML = " "
 
