@@ -47,10 +47,11 @@ body {
 .wrapper {
   width: 100%;
   padding: 15px;
+  border-radius: 15px;
 }
 
 .ai {
-  background: #c78e8e; /* change to black */
+  background: #f4f6ff; /* change to light blue */
 }
 
 .chat {
